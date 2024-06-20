@@ -23,7 +23,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun afterCreate() {
+        wordList.add(AnswerType("你好，我是水神芙宁娜，请问你有什么问题吗？", AnswerType.TYPE_QUESTION))
         binding.rvMain.layoutManager = LinearLayoutManager(this)
+        binding.rvMain.adapter = RvAdapter(wordList)
         mViewModel.answer.observe(this) {
             wordList.add(AnswerType(it.answer, AnswerType.TYPE_QUESTION))
             binding.rvMain.adapter = RvAdapter(wordList)
