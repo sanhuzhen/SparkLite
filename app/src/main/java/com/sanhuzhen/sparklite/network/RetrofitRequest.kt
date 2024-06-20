@@ -1,6 +1,5 @@
 package com.sanhuzhen.sparklite.network
 
-import androidx.annotation.MainThread
 import com.sanhuzhen.sparklite.api.ApiService
 import com.sanhuzhen.sparklite.bean.AnswerALi
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
